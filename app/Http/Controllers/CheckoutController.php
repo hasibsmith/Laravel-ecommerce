@@ -29,7 +29,7 @@ class CheckoutController extends Controller
         // Fetch the product based on the product_id
         $product = \App\Models\Product::find($item['product_id']);
         
-        // If product exists, update cart item with product info
+      
         if ($product) {
             $cartItems[$id]['name'] = $product->name;
             $cartItems[$id]['price'] = $product->price;
