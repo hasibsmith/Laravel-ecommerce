@@ -18,14 +18,14 @@ class CartController extends Controller
         $total = 0;
 
         foreach ($cartItems as $productId => $item) {
-            // Assuming you have a Product model to fetch product details
+        
             $product = \App\Models\Product::find($item['product_id']);
 
-            // Update cart item with product name and price
+      
             $cartItems[$productId]['name'] = $product->name;
             $cartItems[$productId]['price'] = $product->price;
 
-            // Calculate the total
+         
             $total += $item['quantity'] * $product->price;
         }
 
