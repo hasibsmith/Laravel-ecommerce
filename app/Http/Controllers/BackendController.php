@@ -22,10 +22,9 @@ class BackendController extends Controller
 
     public function show($id)
     {
-        // Fetch the product by ID
         $product = Product::findOrFail($id);
 
-        // Pass the product to the view
+       
         return view('product.single-product', compact('product'));
     }
 }
